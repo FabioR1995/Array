@@ -3,21 +3,34 @@ import java.util.Scanner;
 public class NumeriSottoLaMedia {
 
 	public static void main(String[] args) {
-		int temperatura;
-		double sommaTemperature=0;
-		int valoriInseriti;
+		int numeroTemperature;
 		Scanner tastiera= new Scanner(System.in);
 		System.out.println("Quanti valori di temperatura vuoi inserire?");
-		temperatura= tastiera.nextInt();
-		double [] temperature= new double[temperatura];
-		for(int i=0; i<temperature.length;i++) {
-			System.out.println("Inserisci la "+i+" temperatura");
-			valoriInseriti=tastiera.nextInt();
-			temperature[i]=valoriInseriti;
-			sommaTemperature= sommaTemperature+temperature[i];
+		numeroTemperature= tastiera.nextInt();
+		double[] arrayTemperature= new double[numeroTemperature];
+		temperaturaMedia(arrayTemperature);
+	}
+	
+	//metodo che calcola la temperatura media 
+	public static void temperaturaMedia(double[] temperatura){
+		double sommaTemperature=0;
+		double temperaturaMedia;
+		int contaGiorni=0;
+		Scanner tastiera= new Scanner(System.in);
+		for(int i=0;i<temperatura.length;i++){
+			System.out.println("Inserisci un valore positivo della temperatura");
+			temperatura[i]=tastiera.nextDouble();
+			sommaTemperature=sommaTemperature+temperatura[i];
 		}
-		double temperaturaMedia= sommaTemperature/temperature.length;
-		System.out.println("La media delle temperature e': "+ temperaturaMedia);
+		tastiera.close();
+		temperaturaMedia=sommaTemperature/temperatura.length;
+		System.out.println("La temperatura media vale:"+ temperaturaMedia);
+		//giorni in cui la temperatura e' al di sotto della media
+		for(int i=0;i<temperatura.length;i++){
+			if(temperaturaMedia>temperatura[i])
+				contaGiorni++;
+		}
+		System.out.println("Il numero di giorni in cui la temperatura e' al di sotto della media sono: "+contaGiorni);
 	}
 
 }
