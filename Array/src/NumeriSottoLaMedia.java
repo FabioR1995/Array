@@ -30,7 +30,8 @@ public class NumeriSottoLaMedia {
 			if(temperaturaMedia>temperatura[i])
 				contaGiorni++;
 		}
-		System.out.println("Il numero di giorni in cui la temperatura e' al di sotto della media sono: "+contaGiorni);
+		System.out.println();
+		System.out.println("Il numero di giorni in cui le temperature sono al di sotto della media sono: "+contaGiorni);
 	}
 
 }

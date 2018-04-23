@@ -31,6 +31,7 @@ public class ContaFamiglie {
 		for(int j=0;j<reddito.length;j++)
 			if(reddito[j]<calcoloReddito)
 				redditoInferiore++;
+		System.out.println();
 		System.out.println("Le famiglie con reddito inferiore fino al 10% rispetto al reddito massimo sono:"+ redditoInferiore);
 	}
 }
