@@ -7,7 +7,6 @@ public class FrequenzaCarattere {
 		Scanner tastiera= new Scanner(System.in);
 		String telefono;
 		char numero;
-		long nuovoNumero = 0;
 		
 		for(int j=0;j<cifra.length;j++){
 			System.out.println("Inserisci il numero di telefono");
@@ -20,7 +19,7 @@ public class FrequenzaCarattere {
 		}
 		
 		for(int i=0;i<cifra.length;i++){
-			System.out.print(cifra[i]);
+			System.out.print(cifra[i]); //stampa l' array riempito
 		} 
 		
 		
